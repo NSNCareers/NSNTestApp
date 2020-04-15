@@ -16,6 +16,7 @@ pipeline{
         stage('Cleaning Workspace'){
             steps{
                 echo 'Cleaning Workspace'
+                echo "Working dir is :${PWD}"
                 cleanWs()
             }
         }   
@@ -33,14 +34,14 @@ pipeline{
         stage('Restore Solution'){
             steps{
                 echo 'Restoring Solution'
-                sh "dotnet restore"
+                sh "dotnet restore LoginApp.sln"
             }
         }
 
         stage('Build Solution'){
             steps{
                 echo 'Building Solution'
-                 sh 'dotnet build'
+                 sh 'dotnet build LoginApp.sln'
             }
         }
 
@@ -55,7 +56,7 @@ pipeline{
         stage('Publish build'){
             steps{
                  echo 'Publishing Solution'
-                sh 'dotnet publish -c Release -r win-x64 --output ${BuildOutput}'
+                sh 'dotnet publish -c Release -r win-x64 --output ${BuildOutput} LoginApp.sln'
             }
 
         }
