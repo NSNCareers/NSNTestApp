@@ -1,0 +1,55 @@
+pipeline{
+
+    agent any
+
+    environment{
+    NAME="Ngwesse Elvis"
+    BuildOutput="./BuildOutput"
+    registry = "dockerelvis/testapp"
+    registryCredential = 'duckerhub'
+    dockerImage = ''
+    
+    }
+
+    stages{
+        stage('Checkout from SCM'){
+            steps{
+                echo 'Checking Out from GitHub'
+                echo "NAME = ${env.NAME}"
+            }
+        }
+
+        stage('Build image'){
+            steps{
+                 echo 'Building docker image'
+                 script {
+                         dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+
+        }
+        
+        stage('Deploy image'){
+            steps{
+                 echo 'Delpoying docker image'
+                 script {
+                         docker.withRegistry( '', registryCredential ) {
+                          dockerImage.push()
+                          echo 'Delpoyment complete'
+                     }
+                }
+            }
+
+        }
+        
+         stage('Clean up Containers'){
+            steps{
+                 echo 'Cleanning Containers'
+                 sh 'docker rmi $registry:$BUILD_NUMBER'
+            }
+
+        }
+         
+
+    }
+}
