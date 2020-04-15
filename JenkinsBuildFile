@@ -5,7 +5,7 @@ pipeline{
         label 'slave01'
         
        }
-    }
+    
     
     environment{
     NAME="Ngwesse Elvis"
@@ -55,7 +55,9 @@ pipeline{
 
         }
         
+        
          
+        }
 
     }
 }
