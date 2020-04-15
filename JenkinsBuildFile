@@ -8,15 +8,19 @@ pipeline{
     BuildOutput="./BuildOutput"  
     }
     
-     stage('Cleaning Workspace'){
+    
+        
+
+    stages{
+    
+        stage('Cleaning Workspace'){
             steps{
                 echo 'Cleaning Workspace'
                 cleanWs()
             }
-        }
+        }   
         
-
-    stages{
+        
         stage('Checkout from SCM'){
             steps{
                 echo 'Checking Out from GitHub'
