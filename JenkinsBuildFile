@@ -7,6 +7,14 @@ pipeline{
     NAME="Ngwesse Elvis"
     BuildOutput="./BuildOutput"  
     }
+    
+     stage('Cleaning Workspace'){
+            steps{
+                echo 'Cleaning Workspace'
+                cleanWs()
+            }
+        }
+        
 
     stages{
         stage('Checkout from SCM'){
@@ -16,12 +24,7 @@ pipeline{
             }
         }
         
-           stage('Cleaning Workspace'){
-            steps{
-                echo 'Cleaning Workspace'
-                cleanWs()
-            }
-        }
+          
 
         stage('Restore Solution'){
             steps{
