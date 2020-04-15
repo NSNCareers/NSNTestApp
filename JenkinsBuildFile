@@ -1,8 +1,6 @@
 pipeline{
 
-   agent {
-        label 'slave01'
-       }
+   agent any
     
     
     environment{
@@ -18,10 +16,12 @@ pipeline{
             }
         }
         
-       stage('CleanWorkspace') {
-            steps {
+           stage('Cleaning Workspace'){
+            steps{
+                echo 'Cleaning Workspace'
                 cleanWs()
             }
+        }
 
         stage('Restore Solution'){
             steps{
