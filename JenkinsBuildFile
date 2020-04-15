@@ -33,14 +33,14 @@ pipeline{
         stage('Restore Solution'){
             steps{
                 echo 'Restoring Solution'
-                sh "dotnet restore LoginApp.sln"
+                sh "dotnet restore"
             }
         }
 
         stage('Build Solution'){
             steps{
                 echo 'Building Solution'
-                 sh 'dotnet build LoginApp.sln'
+                 sh 'dotnet build'
             }
         }
 
@@ -55,7 +55,7 @@ pipeline{
         stage('Publish build'){
             steps{
                  echo 'Publishing Solution'
-                sh 'dotnet publish -c Release -r win-x64 --output ${BuildOutput} LoginApp.sln'
+                sh 'dotnet publish -c Release -r win-x64 --output ${BuildOutput}'
             }
 
         }
