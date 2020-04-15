@@ -8,9 +8,7 @@ pipeline{
     BuildOutput="./BuildOutput"  
     }
     
-    
-        
-
+   
     stages{
     
         stage('Cleaning Workspace'){
