@@ -1,1 +1,3 @@
 # LoginApp
+
+Set up slave
