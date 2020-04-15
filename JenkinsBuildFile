@@ -32,7 +32,7 @@ pipeline{
         stage('Restore Solution'){
             steps{
                 echo 'Restoring Solution'
-                sh "dotnet restore LoginApp.sln"
+                sh "dotnet restore /home/jenkins/LoginApp.sln"
             }
         }
 
