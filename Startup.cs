@@ -79,6 +79,7 @@ namespace LoginApp
                 var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 context.Database.Migrate();
             }
+            
 
             if (env.IsDevelopment())
             {
