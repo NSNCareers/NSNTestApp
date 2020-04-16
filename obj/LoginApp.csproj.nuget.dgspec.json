@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\LoginApp.csproj": {}
+    "C:\\Users\\ajang\\Desktop\\Users\\LoginApp\\LoginApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\LoginApp.csproj": {
+    "C:\\Users\\ajang\\Desktop\\Users\\LoginApp\\LoginApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\LoginApp.csproj",
+        "projectUniqueName": "C:\\Users\\ajang\\Desktop\\Users\\LoginApp\\LoginApp.csproj",
         "projectName": "LoginApp",
-        "projectPath": "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\LoginApp.csproj",
+        "projectPath": "C:\\Users\\ajang\\Desktop\\Users\\LoginApp\\LoginApp.csproj",
         "packagesPath": "C:\\Users\\ajang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\obj\\",
+        "outputPath": "C:\\Users\\ajang\\Desktop\\Users\\LoginApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
