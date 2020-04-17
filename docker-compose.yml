@@ -23,7 +23,7 @@ services:
     volumes:  
       - ./data/mssql:/var/opt/mssql3  
     ports:  
-      - '1433:1433'  
+      - '1433'  
     expose:  
       - 1433 
     networks:
@@ -40,7 +40,6 @@ services:
       - sqlserverService
     ports:
       - "4000:4000" 
-      - "1433:1433" 
     networks:
       - loginappNetwork      
 
