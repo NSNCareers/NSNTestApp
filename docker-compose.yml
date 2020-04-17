@@ -5,6 +5,8 @@ services:
     ports:
       - "80"
     restart: always
+    environment:
+      LOGINAPP_DB_HOST: sqlserverService:3306
     depends_on:  
       - sqlserverService 
     networks:
@@ -34,6 +36,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
+      - loginapp
+    links:
       - loginapp
       - sqlserverService
     ports:
