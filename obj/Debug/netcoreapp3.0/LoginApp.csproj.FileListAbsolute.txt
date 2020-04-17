@@ -487,3 +487,4 @@ C:\Users\ajang\Desktop\AWSRepo\NSNTestApp\obj\Debug\netcoreapp3.0\staticwebasset
 C:\Users\ajang\Desktop\AWSRepo\NSNTestApp\obj\Debug\netcoreapp3.0\LoginApp.dll
 C:\Users\ajang\Desktop\AWSRepo\NSNTestApp\obj\Debug\netcoreapp3.0\LoginApp.pdb
 C:\Users\ajang\Desktop\AWSRepo\NSNTestApp\obj\Debug\netcoreapp3.0\LoginApp.genruntimeconfig.cache
+C:\Users\ajang\Desktop\AWSRepo\NSNTestApp\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
