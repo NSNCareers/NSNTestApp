@@ -5,8 +5,6 @@ services:
     ports:
       - "80"
     restart: always
-    environment:
-      LOGINAPP_DB_HOST: sqlserverService:3306
     depends_on:  
       - sqlserverService 
     networks:
