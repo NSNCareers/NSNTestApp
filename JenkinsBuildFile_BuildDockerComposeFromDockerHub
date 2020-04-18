@@ -3,16 +3,49 @@ pipeline{
 	
     environment{
     NAME="Ngwesse Elvis"
-    }       
+    }
+
+    stages{
+        stage('Checkout from SCM'){
+            steps{
+                echo 'Checking Out from GitHub'
+                echo "NAME = ${env.NAME}"
+            }
+        }
+
+        stage('Restore Solution'){
+            steps{
+                echo 'Restoring Solution'
+                sh "dotnet restore LoginApp.sln"
+            }
+        }
+
+        stage('Build Solution'){
+            steps{
+                echo 'Building Solution'
+                 sh 'dotnet build LoginApp.sln'
+            }
+        }
+
+        stage('Run Unit Test'){
+            steps{
+                echo 'Running unit tests'
+                 sh 'dotnet test LoginApp.csproj'
+            }
+
+        }
 
         stage('Docker compose build'){
             steps{
                  echo 'Starting docker compose'
-                /* sh "docker-compose -f docker-compose2.yml build"*/
-                 sh "docker-compose up -d"
+                /* sh "docker-compose build"*/
+                 sh "docker-compose -f docker-compose2.yml up -d"
             }
 
-        }	
+        }
+	
+	
+	
 	
         
     }
