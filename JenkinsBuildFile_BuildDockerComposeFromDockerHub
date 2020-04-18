@@ -1,0 +1,42 @@
+pipeline{
+   agent { label "slave01" }
+	
+    environment{
+    NAME="Ngwesse Elvis"
+    }       
+
+        stage('Docker compose build'){
+            steps{
+                 echo 'Starting docker compose'
+                /* sh "docker-compose -f docker-compose2.yml build"*/
+                 sh "docker-compose up -d"
+            }
+
+        }	
+	
+        
+    }
+	
+	
+	  post {
+        always {
+             echo 'One way or another, I have finished'
+			       /* sh "docker-compose down -v" */
+                    /*deleteDir()*/
+        }
+        success {
+            echo 'I succeeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
+        }
+        changed {
+            echo 'Things were different before...'
+        }
+        
+    } 
+	
+}
