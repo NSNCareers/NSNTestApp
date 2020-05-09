@@ -12,6 +12,9 @@ using LoginApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using LoginApp.EmailSenders;
 
 namespace LoginApp
 {
@@ -27,16 +30,27 @@ namespace LoginApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            var emailConfig = Configuration
+             .GetSection("EmailConfiguration")
+             .Get<EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+
+            services.AddDbContextPool<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DockerConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+            services.AddTransient<IEmailSender,EmailSender>();
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
 
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
+                options.SignIn.RequireConfirmedEmail = true;
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = false;
@@ -70,15 +84,10 @@ namespace LoginApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context)
         {
-            //With migration created, use this to update database
 
-            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
-            {
-                var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                context.Database.Migrate();
-            }
+            app.UseForwardedHeaders();
 
             if (env.IsDevelopment())
             {
@@ -99,6 +108,8 @@ namespace LoginApp
             app.UseRouting();
 
             app.UseAuthentication();
+
+            context.Database.Migrate();
 
             app.UseAuthorization();
 
