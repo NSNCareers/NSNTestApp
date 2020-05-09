@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jxxe5OjHvs+/4TnrAo0E1nsI5ffj90ghGoh9C74qMfD+8mG0pKImrqgaEkPbjFH0Z7SnIyGxJOzC7RligqKDLw==",
+  "dgSpecHash": "VZHS4YdzMbheMb9CctRxPJ8JtdGpbhxPddGkOZfehOMfsGc7h6AYWpxlrlGCwArlIEwAlWcXaETKP/oP7QpLJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ajang\\Desktop\\AWSRepo\\LoginApp\\LoginApp.csproj",
+  "projectFilePath": "C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\LoginApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ajang\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "C:\\Users\\ajang\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.0.0\\microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",
