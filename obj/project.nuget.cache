@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UsB83gcBBg5ujyah13z1BOgfbch7qo8QhrdkOkEcvP2Uxr8YVFI9GDapeDvpjnYhdYvsbyGU4i9umR533tqpnA==",
+  "dgSpecHash": "KivIXr3TkMgjH7AdDgOtLbexc9+oZ2oaYEbKZjxhGIfw2akrjUb5joX+6X39PvrOJ1GMtFBFfqrOpzFFn5VD0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ajang\\Desktop\\AWSRepo\\NSNTestApp\\LoginApp.csproj",
+  "projectFilePath": "C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\LoginApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ajang\\.nuget\\packages\\mailkit\\2.0.1\\mailkit.2.0.1.nupkg.sha512",
     "C:\\Users\\ajang\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
