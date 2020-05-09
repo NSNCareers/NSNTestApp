@@ -12,7 +12,7 @@ namespace LoginApp.Areas.Identity.Pages.Account
     {
         public void OnGet()
         {
-
+            throw new System.InvalidOperationException("Unable to Reset Password Confirmation, Implementation is not yet complete");
         }
     }
 }

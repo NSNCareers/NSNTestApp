@@ -11,6 +11,7 @@ namespace LoginApp.Areas.Identity.Pages.Account
     {
         public void OnGet()
         {
+            throw new System.InvalidOperationException("Unable to confirm forgot password, Implementation is not yet complete");
         }
     }
 }

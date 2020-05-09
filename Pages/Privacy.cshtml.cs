@@ -16,6 +16,7 @@ namespace LoginApp.Pages
 
         public void OnGet()
         {
+            throw new System.InvalidOperationException("Unable to click on Privacy Link, Implementation is not yet complete");
         }
     }
 }
