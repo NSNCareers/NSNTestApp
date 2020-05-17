@@ -9408,21 +9408,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ajang\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ajang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\LoginApp.csproj",
+      "projectUniqueName": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\LoginApp.csproj",
       "projectName": "LoginApp",
-      "projectPath": "C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\LoginApp.csproj",
+      "projectPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\LoginApp.csproj",
       "packagesPath": "C:\\Users\\ajang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\obj\\",
+      "outputPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\ajang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -9509,16 +9505,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ajang\\Desktop\\Repos\\NSNTestApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
