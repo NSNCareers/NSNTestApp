@@ -24,13 +24,11 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public void OnGet()
         {
-            throw new System.InvalidOperationException("Unable to logout, Implementation is not yet complete");
+
         }
 
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
-            throw new System.InvalidOperationException("Unable to logout, Implementation is not yet complete");
-
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)

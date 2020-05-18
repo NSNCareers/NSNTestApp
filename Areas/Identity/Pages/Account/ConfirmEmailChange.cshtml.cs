@@ -28,8 +28,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnGetAsync(string userId, string email, string code)
         {
-            throw new System.InvalidOperationException("Unable to confirm email change, Implementation is not yet complete");
-
             if (userId == null || email == null || code == null)
             {
                 return RedirectToPage("/Index");

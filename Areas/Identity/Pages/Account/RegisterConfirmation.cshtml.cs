@@ -29,8 +29,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnGetAsync(string email)
         {
-            throw new System.InvalidOperationException("Unable to confirm registration, Implementation is not yet complete");
-
             if (email == null)
             {
                 return RedirectToPage("/Index");

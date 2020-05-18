@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace LoginApp.Areas.Identity.Pages.Account
 {
@@ -46,8 +43,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public IActionResult OnGet(string code = null)
         {
-            throw new System.InvalidOperationException("Unable to reset password, Implementation is not yet complete");
-
             if (code == null)
             {
                 return BadRequest("A code must be supplied for password reset.");
@@ -67,8 +62,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            throw new System.InvalidOperationException("Unable to reset password, Implementation is not yet complete");
-
             if (!ModelState.IsValid)
             {
                 return Page();

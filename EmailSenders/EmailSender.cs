@@ -17,8 +17,6 @@ namespace LoginApp.EmailSenders
 
         public async Task SendEmailAsync(string email, string subjects, string htmlMessage)
         {
-            throw new System.InvalidOperationException("Unable to send Email, Implementation is not yet complete");
-
             var email1 = "snscareers@yahoo.com";
             var email3 = "NSNCareers@outlook.com";
             var fromAddress = new MailAddress(_emailConfig.From);

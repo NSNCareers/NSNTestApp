@@ -37,8 +37,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            throw new System.InvalidOperationException("Unable to reset forgot password, Implementation is not yet complete");
-
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(Input.Email);

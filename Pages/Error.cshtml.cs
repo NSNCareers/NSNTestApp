@@ -25,7 +25,6 @@ namespace LoginApp.Pages
 
         public void OnGet()
         {
-            throw new System.InvalidOperationException("Error message Implementation is not yet complete");
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }

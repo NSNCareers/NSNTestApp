@@ -27,7 +27,6 @@ namespace LoginApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnGetAsync(string userId, string code)
         {
-            throw new System.InvalidOperationException("Unable to confirm email, Implementation is not yet complete");
 
             if (userId == null || code == null)
             {
