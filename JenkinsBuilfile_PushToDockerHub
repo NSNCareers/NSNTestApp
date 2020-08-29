@@ -5,7 +5,7 @@ pipeline{
     environment{
     NAME="Ngwesse Elvis"
     BuildOutput="./BuildOutput"
-    registry = "dockerelvis/loginapp"
+    registry = "dockerelvis/prodloginapp"
     registryCredential = 'duckerhub'
     dockerImage = ''
     
