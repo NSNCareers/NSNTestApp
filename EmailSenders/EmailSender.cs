@@ -1,8 +1,8 @@
-﻿using System.Net.Mail;
-using System.Net;
-using Microsoft.AspNetCore.Identity.UI.Services;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
 using System;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace LoginApp.EmailSenders
 {
@@ -17,8 +17,9 @@ namespace LoginApp.EmailSenders
 
         public async Task SendEmailAsync(string email, string subjects, string htmlMessage)
         {
-            var email1 = "snscareers@yahoo.com";
-            var email3 = "NSNCareers@outlook.com";
+            // var email1 = "snscareers@yahoo.com";
+            // var email3 = "NSNCareers@outlook.com";
+            // nsncareerstest@gmail.com
             var fromAddress = new MailAddress(_emailConfig.From);
             var toAddress = new MailAddress(email);
             string fromPassword = _emailConfig.Password;
@@ -34,8 +35,9 @@ namespace LoginApp.EmailSenders
                     Port = _emailConfig.Port,
                     EnableSsl = _emailConfig.EnableSsl,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
+                    Credentials = new NetworkCredential(fromAddress.Address.Trim(), fromPassword.Trim()),
                     Timeout = _emailConfig.Timeout
+
                 };
 
                 using (var message = new MailMessage(fromAddress, toAddress)
