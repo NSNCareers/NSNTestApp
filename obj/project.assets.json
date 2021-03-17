@@ -9413,11 +9413,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\LoginApp.csproj",
+      "projectUniqueName": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp_GraduateVersion\\LoginApp.csproj",
       "projectName": "LoginApp",
-      "projectPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\LoginApp.csproj",
+      "projectPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp_GraduateVersion\\LoginApp.csproj",
       "packagesPath": "C:\\Users\\ajang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp\\obj\\",
+      "outputPath": "C:\\Users\\ajang\\Desktop\\GitHub_Repo\\NSNTestApp_GraduateVersion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ajang\\AppData\\Roaming\\NuGet\\NuGet.Config",
